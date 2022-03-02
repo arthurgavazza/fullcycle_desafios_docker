@@ -7,8 +7,8 @@ services:
       context: .
     container_name: app
     entrypoint: dockerize -wait tcp://db:3306 -timeout 20s docker-entrypoint.sh 
-    command: "node index.js"
-    networks: 
+    command: bash -c "if [ ! -d node_modules ] ; then npm install --save mysql express ; fi && exec node index.js"
+    networks:
       - node-network
     volumes: 
       - ./:/usr/src/app

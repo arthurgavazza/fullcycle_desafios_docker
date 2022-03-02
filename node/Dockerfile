@@ -10,12 +10,5 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
     && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
 COPY package.json .
-RUN npm install --save mysql express
 
 EXPOSE 3000
-
-
-
-#CMD [ "tail", "-f", "/dev/null"]
-
-#CMD ["echo","done"]

@@ -15,7 +15,7 @@ const sql = `INSERT INTO people(name) values('Wesley')`
 
 connection.query(createTableSQL,(err) => {
     if (!err) connection.query(sql)
-    connection.query(sql2)
+
 })
 
 
@@ -45,5 +45,5 @@ app.get('/', (req,res) => {
 })
 
 app.listen(port, ()=> {
-    console.log('Rodando na porta ' + port)
+   
 })
